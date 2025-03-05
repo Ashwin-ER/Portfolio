@@ -41,4 +41,4 @@ npm start
 - Framer Motion
 - TypeScript
 - React Icons
-- Hero Icons 
+- Hero Icons
