@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scroll-offset: 80px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-offset);
+  }
+
+  * {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold text-center mb-12;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-dark-100 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl 
+           hover:scale-[1.02] hover:border-primary-500 hover:border-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg 
+           transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/20;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold 
+           py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/20;
+  }
+} 
